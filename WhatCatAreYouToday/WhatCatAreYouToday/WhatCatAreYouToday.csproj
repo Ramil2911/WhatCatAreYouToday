@@ -1,0 +1,66 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SkiaSharp" Version="2.80.2" />
+    <PackageReference Include="System.Drawing.Common" Version="4.7.0" />
+    <PackageReference Include="Xam.Plugin.Media" Version="5.0.1" />
+    <PackageReference Include="Xamarin.Forms" Version="4.6.0.1141" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="cats\0.png" />
+    <EmbeddedResource Include="cats\0.png" />
+    <None Remove="cats\1.png" />
+    <EmbeddedResource Include="cats\1.png" />
+    <None Remove="cats\10.jpg" />
+    <EmbeddedResource Include="cats\10.jpg" />
+    <None Remove="cats\11.jpg" />
+    <EmbeddedResource Include="cats\11.jpg" />
+    <None Remove="cats\12.jpg" />
+    <EmbeddedResource Include="cats\12.jpg" />
+    <None Remove="cats\13.jpg" />
+    <EmbeddedResource Include="cats\13.jpg" />
+    <None Remove="cats\14.jpg" />
+    <EmbeddedResource Include="cats\14.jpg" />
+    <None Remove="cats\15.jpg" />
+    <EmbeddedResource Include="cats\15.jpg" />
+    <None Remove="cats\16.jpg" />
+    <EmbeddedResource Include="cats\16.jpg" />
+    <None Remove="cats\2.png" />
+    <EmbeddedResource Include="cats\2.png" />
+    <None Remove="cats\3.jpg" />
+    <EmbeddedResource Include="cats\3.jpg" />
+    <None Remove="cats\4.jpg" />
+    <EmbeddedResource Include="cats\4.jpg" />
+    <None Remove="cats\6.jpg" />
+    <EmbeddedResource Include="cats\6.jpg" />
+    <None Remove="cats\7.jpg" />
+    <EmbeddedResource Include="cats\7.jpg" />
+    <None Remove="cats\8.jpg" />
+    <EmbeddedResource Include="cats\8.jpg" />
+    <None Remove="cats\9.jpg" />
+    <EmbeddedResource Include="cats\9.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="cats\5.jpg" />
+    <EmbeddedResource Include="cats\5.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Xamarin.Forms.Platform.Android, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\..\..\..\..\..\Microsoft\Xamarin\NuGet\xamarin.forms\4.6.0.1141\lib\MonoAndroid90\Xamarin.Forms.Platform.Android.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>
