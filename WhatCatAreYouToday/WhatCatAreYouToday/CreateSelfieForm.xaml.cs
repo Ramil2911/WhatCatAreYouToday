@@ -23,7 +23,7 @@ namespace WhatCatAreYouToday
             _parent = parent;
         }
         
-        public async void TakeAPhoto(object sender, EventArgs eventArgs)
+        private async void TakeAPhoto(object sender, EventArgs eventArgs)
         {
             await CrossMedia.Current.Initialize();
             if (!CrossMedia.Current.IsCameraAvailable || !CrossMedia.Current.IsTakePhotoSupported)
@@ -36,6 +36,20 @@ namespace WhatCatAreYouToday
                 Name = $"{DateTime.Now:dd.MM.yyyy_hh.mm.ss}.jpg"
             });
 
+            if (file == null)
+                return;
+            
+            _parent.ContentPresenter.Content = new CatClassifierForm(SKBitmap.Decode(file.Path));
+        }
+
+        private async void PickAPhoto(object sender, EventArgs eventArgs)
+        {
+            await CrossMedia.Current.Initialize();
+            if (!CrossMedia.Current.IsPickPhotoSupported)
+            {
+                return;
+            }
+            var file = await CrossMedia.Current.PickPhotoAsync();
             if (file == null)
                 return;
             

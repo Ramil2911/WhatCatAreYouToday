@@ -7,6 +7,7 @@
         <StackLayout>
             <Label Text="Сделайте фото себя, чтобы узнать!" FontSize="Title" Padding="30,10,30,10"/>
             <Button Text="Сделать фото" Pressed="TakeAPhoto"/>
+            <Button Text="Выбрать" Pressed="PickAPhoto"/>
         </StackLayout>
     </ContentView.Content>
 </ContentView>
