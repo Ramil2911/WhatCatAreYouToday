@@ -1,12 +1,6 @@
-﻿using System;
-using System.Threading.Tasks;
-using Xamarin.Forms;
-using Plugin.Media;
-using Plugin.Media.Abstractions;
-
-namespace WhatCatAreYouToday
+﻿namespace WhatCatAreYouToday
 {
-    public partial class MainPage : ContentPage
+    public partial class MainPage
     {
         public MainPage()
         {

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
@@ -8,12 +7,10 @@ using System.Threading.Tasks;
 
 namespace CatsClassifier
 {
-    class Program
+    internal static class Program
     {
-        static void Main(string[] args)
+        private static void Main()
         {
-            
-            
             var files = Directory.GetFiles("C:\\Users\\Ramil\\Desktop\\коты", "*.png").ToList();
             files.AddRange(Directory.GetFiles("C:\\Users\\Ramil\\Desktop\\коты", "*.jpg"));
             var data = new string[files.Count];

@@ -2,8 +2,6 @@
 using System.Linq;
 using Xamarin.Forms;
 using Color = System.Drawing.Color;
-using Image = Xamarin.Forms.Image;
-using Rectangle = System.Drawing.Rectangle;
 using SkiaSharp;
 using Xamarin.Forms.Internals;
 
@@ -11,7 +9,7 @@ namespace WhatCatAreYouToday
 {
     public static class Classifier
     {
-        private static readonly Color[] Colors = new Color[]
+        private static readonly Color[] Colors =
         {
             Color.FromArgb(255, 142, 131, 124), //1 (0)
             Color.FromArgb(255, 92, 55, 51),
